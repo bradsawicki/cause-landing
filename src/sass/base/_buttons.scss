@@ -1,0 +1,46 @@
+
+a {
+	&:hover {
+	}
+}
+
+@mixin btn {
+  @include global-transition(0.1s);
+  @include font-size(18px);
+  display: block;
+  height: 56px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-family: $sans;
+  font-weight: $med;
+  line-height: 1;
+  text-align: center;
+
+  @include bp-min-width($small) {
+    display: inline-block;
+    width: 140px;
+  }
+
+  &:hover {
+    background: #fff;
+    color: $blue;
+  }
+}
+
+.btn {
+  @include btn;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @include bp-max-width($small) {
+    width: 100%;
+  }
+}

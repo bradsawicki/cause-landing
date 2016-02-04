@@ -1,0 +1,41 @@
+
+$sans: "canada-type-gibson", Helvetica, arial, sans-serif;
+
+$base:  24px;
+
+$reg:  400;
+$med:   600;
+$bold:  700;
+
+body {
+  font: $reg 1em/1.5em $sans;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+}
+
+h1 {
+  @include font-size(42px);
+  font-weight: $bold;
+
+  @include bp-min-width($small) {
+    @include font-size(66px);
+  }
+}
+
+h2 {
+  @include font-size(24px);
+}
+
+p {
+  @include font-size(18px);
+}
+
+strong, b {
+  font-weight: $bold;
+}
+
+em {
+  font-style: italic;
+}

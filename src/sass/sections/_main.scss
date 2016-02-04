@@ -1,0 +1,96 @@
+
+.phones {
+  @include bp-max-width($medium) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @include bp-min-width($medium) {
+    position: absolute;
+    top: $base;
+    left: 0;
+    width: 300px;
+  }
+
+  @include bp-min-width($large) {
+    top: $base*2;
+    width: 50%;
+  }
+}
+
+.content {
+  @include bp-min-width($medium) {
+    margin-left: 340px;
+  }
+
+  @include bp-min-width($large) {
+    margin-left: 50%;
+    padding-left: 40px;
+  }
+
+  @include bp-min-width($xlarge) {
+    padding-left: 80px;
+  }
+}
+
+.title {
+  margin-bottom: 2px;
+}
+
+.tagline {
+  margin-bottom: $base;
+
+  @include bp-min-width($small) {
+    margin-bottom: $base*1.5;
+  }
+}
+
+.body {
+  margin-bottom: $base;
+
+  @include bp-min-width($large) {
+    max-width: 340px;
+  }
+}
+
+.newsletter-form {
+  position: relative;
+  margin-bottom: $base*1.5;
+}
+
+.form-item--email {
+  width: 100%;
+
+  @include bp-max-width($small) {
+    margin-bottom: 12px;
+  }
+
+  @include bp-min-width($small) {
+    padding-right: 160px;
+  }
+}
+
+.form-item--submit {
+  @include bp-min-width($small) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.social-links {
+  @include cf;
+
+  @include bp-max-width($small) {
+    margin-bottom: $base;
+  }
+}
+
+.social-link--item {
+  float: left;
+}
+
+.social-link--item:not(:last-child) {
+  margin-right: 30px;
+}
+
