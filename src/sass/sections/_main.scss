@@ -1,5 +1,9 @@
 
 .phones {
+  animation-name: fade-in;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+
   @include bp-max-width($medium) {
     max-width: 400px;
     margin: 0 auto;
@@ -19,6 +23,10 @@
 }
 
 .content {
+  opacity: 0;
+  animation: fade-in .75s ease-in-out .5s;
+  animation-fill-mode: forwards;
+
   @include bp-min-width($medium) {
     margin-left: 340px;
   }

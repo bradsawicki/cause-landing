@@ -1,4 +1,9 @@
 
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 $block-radius: 3px;
 
 // Grid
